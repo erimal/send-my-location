@@ -15,7 +15,7 @@ function fill_form(position) {
     lon.value = position.coords.longitude;
     lat.value = position.coords.latitude;
 
-    document.getElementById("submit").disabled = false;
+    document.getElementById("location_form").submit();
 }
 </script>
 </head>
@@ -23,15 +23,14 @@ function fill_form(position) {
 <body>
 <form id="location_form" method="post" action="handler.php">
 <label for="phone">Phone number</label>
-<input type="text" name="phone" value="<?= $phone ?>">
+<input type="hidden" name="phone" value="<?= $phone ?>">
 <br>
 <label for="longitude">Longitude</label>
-<input type="text" id="longitude" name="longitude" value="">
+<input type="hidden" id="longitude" name="longitude" value="">
 <br>
 <label for="latitude">Latitude</label>
-<input type="text" id="latitude" name="latitude" value="">
+<input type="hidden" id="latitude" name="latitude" value="">
 <br>
-<input id="submit" type="submit" value="OK" disabled>
 </form>
 
 <script type="text/javascript">
