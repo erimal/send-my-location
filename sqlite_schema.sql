@@ -3,7 +3,8 @@ create table orders(
     timestamp date default (datetime('now', 'localtime')),
     phone varchar(20) not null,
     longitude varchar(8),
-    latitude varchar(8)
+    latitude varchar(8),
+    completed integer default 0
 );
 
 
