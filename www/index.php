@@ -22,13 +22,10 @@ function fill_form(position) {
 
 <body>
 <form id="location_form" method="post" action="handler.php">
-<label for="phone">Phone number</label>
 <input type="hidden" name="phone" value="<?= $phone ?>">
 <br>
-<label for="longitude">Longitude</label>
 <input type="hidden" id="longitude" name="longitude" value="">
 <br>
-<label for="latitude">Latitude</label>
 <input type="hidden" id="latitude" name="latitude" value="">
 <br>
 </form>
