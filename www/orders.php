@@ -4,7 +4,8 @@ include_once('db.inc.php');
 
 if (array_key_exists("id", $_GET)) {
     try {
-        $stmt = $pdo->prepare("delete from orders where id = ?");
+        //$stmt = $pdo->prepare("delete from orders where id = ?");
+        $stmt = $pdo->prepare("update orders set completed = 1 where id = ?");
         $stmt->bindValue(1, $_GET['id']);
         $stmt->execute();
     } catch (PDOException $e) {
