@@ -32,7 +32,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 <?php
 include_once('db.inc.php');
-$result = $pdo->query("select * from orders");
+$result = $pdo->query("select * from orders where completed = 0");
 foreach ($result as $row) {
     $phone = $row['phone'];
     $longitude = $row['longitude'];
