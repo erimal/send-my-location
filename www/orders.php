@@ -1,12 +1,6 @@
 <?php
 
-try {
-    $db = "sqlite:../database.sqlite";
-    $pdo = new PDO($db);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo $e->getMessage();
-}
+include_once('db.inc.php');
 
 if (array_key_exists("id", $_GET)) {
     try {

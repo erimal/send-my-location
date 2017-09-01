@@ -31,9 +31,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(mymap);
 
 <?php
-$db = "sqlite:../database.sqlite";
-$pdo = new PDO($db);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+include_once('db.inc.php');
 $result = $pdo->query("select * from orders");
 foreach ($result as $row) {
     $phone = $row['phone'];

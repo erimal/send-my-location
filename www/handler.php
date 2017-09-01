@@ -1,8 +1,6 @@
 <?php
 
-$db = "sqlite:../database.sqlite";
-$pdo = new PDO($db);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+include_once('db.inc.php');
 
 try {
     $stmt = $pdo->prepare(
