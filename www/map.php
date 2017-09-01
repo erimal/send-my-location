@@ -7,7 +7,8 @@
    integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin=""/>
 
 <style type="text/css">
-    #mapid { height: 500px; width: 500px; }
+    html, body { height: 100% }
+    #mapid { height: 100%; width: 100%; }
 </style>
 
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
@@ -16,7 +17,6 @@
 </head>
 
 <body>
-<h1>Map</h1>
 
 <div id="mapid"></div>
 
