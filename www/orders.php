@@ -33,10 +33,13 @@ if (array_key_exists("id", $_GET)) {
 <?php
 try {
     $result = $pdo->query("select * from orders where completed = 0");
+    $address = get_address($row['latitude'], $row['longitude']);
+    $street = $address[0];
+    $area = $address[1];
     foreach ($result as $row) { ?>
         <tr>
         <td><?= $row['phone'] ?></td>
-        <td><?= get_address($row['latitude'], $row['longitude']) ?></td>
+        <td><?= "$street, $area" ?></td>
         <td><?= $row['timestamp'] ?></td>
         <td><a href="/orders.php?id=<?= $row['id'] ?>">Close</a></td>
         </tr>
