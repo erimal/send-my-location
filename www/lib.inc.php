@@ -10,5 +10,3 @@ function get_address($lat, $long) {
     $sublocality = $json['results'][0]['address_components'][1]['long_name'];
     return array($route, $sublocality)";
 }
-
-
